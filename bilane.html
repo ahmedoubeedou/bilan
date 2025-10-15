@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bilane.css" >
+</head>
+<body>
+<div class="container">
+ <p>قيد لبلتوث</p>
+<div class="header">
+    <p class="nouveaux" onclick="clearTous()">فريق جديد</p>
+    <p class="arier" onclick="arier()">تراجع</p>
+</div>
+<div class="moin">
+    <p id="vous">0</p>
+    <p >لهم</p>
+    <p id="nous">0</p>
+    <p>لنا</p>
+    
+</div>
+<div class="mil">
+    <input type="number" id="valuesVous" />
+    <p class="go" id="enregistrer" onclick="calcule()">سجل</p>
+    <input type="number" id="valuesNous" />
+</div>
+<div class="deriner">
+    <p class="resultat" id="resultataVous">0</p>
+    <p class="flech" id="acser" onclick="changevaleur()">➡️</p>
+    <p class="resultat" id="resultatNous">0</p>
+</div>
+<div class="foter" id="foter">
+</div>
+</div> 
+<script src="bilane.js"></script>
+</body>
+</html>
