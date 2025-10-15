@@ -55,7 +55,7 @@ justify-content: space-evenly;
 }
 .nouveaux
 {
-    width: 140px;
+    width: 80px;
     font-size:11px;
 }
 input{
@@ -99,4 +99,5 @@ p:hover{
     font-size: 35px;
 
 }
+
 
