@@ -55,7 +55,8 @@ justify-content: space-evenly;
 }
 .nouveaux
 {
-    width: 70px;
+    width: 100px;
+    
 }
 input{
     width:65px;
@@ -96,4 +97,5 @@ p:hover{
 }
 .flech{
     font-size: 35px;
+
 }
