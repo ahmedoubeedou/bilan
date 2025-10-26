@@ -28,7 +28,6 @@ function calcule()
 
 valueVous = +valuesVous.value;
 valueNous = +valuesNous.value;
-
 totalNous += valueNous;
 totalVous += valueVous;
 remplieChamp();
@@ -85,13 +84,17 @@ if(totalVou >=100 || totalNou >= 100)
 //pour arier un etaps
 function arier()
 {
-if(totalNous===valueNous|| totalNous > valueNous || totalVous === valueVous|| totalVous>valueVous)
+if( totalVous>=valueVous)
 {
-totalNous -= valueNous;
+
 totalVous -= valueVous;
 valuesVous.value = valueVous;
-valuesNous.value=  valueNous;
 remplieChamp()
+}
+if(totalNous >= valueNous ){
+    totalNous -= valueNous;
+    valuesNous.value=  valueNous;
+    remplieChamp()
 }
 }
 //remplie le champs de resultat
@@ -124,6 +127,7 @@ function clearTous()
     clearinput();
     foter.innerHTML="";
 }
+
 
 
 
