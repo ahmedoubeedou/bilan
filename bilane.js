@@ -9,6 +9,8 @@ let resulNous     = document.getElementById("resulNous");
 let acser         = document.getElementById("acser");
 let enregistrer   = document.getElementById("enregistrer");
 let foter         = document.getElementById("foter");
+let gaine_b       = document.getElementById("gaine_b");
+let gaine_p         = document.getElementById("gaine_p");
 let totale=0;
 let totalNous = 0;
 let totalVous = 0;
@@ -16,6 +18,14 @@ let valueVous=0;
 let valueNous=0;
 let numbergnienNous =0;
 let numbergnienVous =0;
+//display boutton and p
+function display()
+{
+        gaine_b.classList.remove("gaine_b");
+        gaine_p.classList.remove("gaine_p");
+        gaine_b.classList.add("gaine_none");
+        gaine_p.classList.add("gaine_none");   
+}
 //clear input
 function clearinput()
 {
@@ -25,7 +35,7 @@ valuesNous.value=""
 //pour calculer 
 function calcule()
 {
-
+    
 valueVous = +valuesVous.value;
 valueNous = +valuesNous.value;
 totalNous += valueNous;
@@ -33,6 +43,7 @@ totalVous += valueVous;
 remplieChamp();
 clearinput();
 remplieresultat();
+display()
 clears(totalVous , totalNous)
 }
 //pour remplier le resultat li mousegline
@@ -53,6 +64,15 @@ pTow.innerHTML = valueNous;
 divValue.appendChild(pOne);
 divValue.appendChild(pTow);
 foter.appendChild(divValue);
+ 
+}
+//disply non none pour button et p
+function dispaly_non()
+{
+     gaine_b.classList.remove("gaine_none");
+        gaine_p.classList.remove("gaine_none");
+        gaine_b.classList.add("gaine_b");
+        gaine_p.classList.add("gaine_p");
 }
 //pour verivier le gaine c'est qui
 function clears(totalVou , totalNou )
@@ -70,6 +90,7 @@ if(totalVou >=100 || totalNou >= 100)
         vous.innerHTML = numbergnienNous;
         totalNous=0;
         totalVous=0;
+       dispaly_non();
     }
     else
     {
@@ -77,6 +98,7 @@ if(totalVou >=100 || totalNou >= 100)
         nous.innerHTML = numbergnienVous; 
         totalNous = 0;
         totalVous = 0; 
+      dispaly_non();
     }
         }
 }
@@ -84,18 +106,11 @@ if(totalVou >=100 || totalNou >= 100)
 //pour arier un etaps
 function arier()
 {
-if( totalVous>=valueVous)
-{
-
+totalNous -= valueNous;
 totalVous -= valueVous;
 valuesVous.value = valueVous;
-remplieChamp()
-}
-if(totalNous >= valueNous ){
-    totalNous -= valueNous;
-    valuesNous.value=  valueNous;
-    remplieChamp()
-}
+valuesNous.value=  valueNous;
+remplieChamp();
 }
 //remplie le champs de resultat
 function remplieChamp()
@@ -111,6 +126,7 @@ function changevaleur()
     totalVous = totalNous;
     totalNous = container
 remplieChamp()
+ 
 }
 //pour suprimer tous les champs (veri9e jedide)
 function clearTous()
@@ -126,9 +142,8 @@ function clearTous()
     vous.innerHTML = 0;
     clearinput();
     foter.innerHTML="";
+    
 }
-
-
 
 
 
