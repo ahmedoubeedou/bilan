@@ -8,6 +8,15 @@
 </head>
 <body>
 <div class="container">
+    <div class="gaine">
+    <p   class="gaine_none" id="gaine_p">
+        BRAVO🎉
+    </p> 
+    <button class="gaine_none" id="gaine_b" onclick="display()">
+        OK
+    </button>
+    </div>
+   
  <p>قيد لبلتوث</p>
 <div class="header">
     <p class="nouveaux" onclick="clearTous()">فريق جديد</p>
@@ -21,9 +30,9 @@
     
 </div>
 <div class="mil">
-    <input type="number" id="valuesVous" />
+    <input type="number" id="valuesVous" onkeyup="display()"/>
     <p class="go" id="enregistrer" onclick="calcule()">سجل</p>
-    <input type="number" id="valuesNous" />
+    <input type="number" id="valuesNous" onkeyup="display()"/>
 </div>
 <div class="deriner">
     <p class="resultat" id="resultataVous">0</p>
